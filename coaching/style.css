@@ -213,3 +213,10 @@ ul.list li {
 }
 ul.submenu{}
 ul.submenu li{}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+.cursor-notallowed {
+    cursor: not-allowed !important;
+}

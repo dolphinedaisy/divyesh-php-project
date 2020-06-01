@@ -3,8 +3,54 @@ jQuery(document).ready(function() {
     var current_fs, next_fs, previous_fs; //fieldsets
     var opacity;
 
+    window.isForm1Valid = false;
+    window.userDetails = {};
+    onPrevious();
+    onFirstFormNext();
+
+
+    $('.radio-group .radio').click(function() {
+        $(this).parent().find('.radio').removeClass('selected');
+        $(this).addClass('selected');
+    });
+
+    $(".submit").click(function() {
+        return false;
+    })
+
+});
+
+function onFirstFormNext() {
+
+    $('#btn-next-1').click(function() {
+
+        userDetails['firstname'] =              $('#firstname').val();
+        userDetails['lastname'] =               $('#lastname').val();
+        userDetails['email'] =                  $('#email').val();
+        userDetails['phoneNumber'] =            $('#phoneNumber').val();
+        userDetails['alternativePhone'] =       $('#alternativePhone').val();
+        userDetails['dateOfBirth'] =            $('#dateOfBirth').val();
+        userDetails['address'] =                $('#address').val();
+        userDetails['gender'] =                 $('input[name="Gender"]:checked').val();
+        userDetails['passportIssued'] =         $('input[name="issued"]:checked').val();
+        userDetails['maritalStatus'] =          $('input[name="maritalStatus"]:checked').val();
+        userDetails['passpoertNumber'] =        $('#passportNumber').val();
+        userDetails['interestedCountry'] =      $('#interestedCountry').val();
+        userDetails['interestedInCoaching'] =   $('#interestedInCoaching').val();
+
+        isForm1Valid = validateForm1();
+
+        if(isForm1Valid) {
+            onNext();
+        } else {
+            return false;
+        }
+
+    });
+}
+
+function onNext() {
     $(".next").click(function() {
-        debugger
 
         current_fs = $(this).parent();
         next_fs = $(this).parent().next();
@@ -33,7 +79,9 @@ jQuery(document).ready(function() {
             duration: 600
         });
     });
+}
 
+function onPrevious() {
     $(".previous").click(function() {
 
         current_fs = $(this).parent();
@@ -64,14 +112,24 @@ jQuery(document).ready(function() {
             duration: 600
         });
     });
+}
 
-    $('.radio-group .radio').click(function() {
-        $(this).parent().find('.radio').removeClass('selected');
-        $(this).addClass('selected');
-    });
+function validateForm1() {
+    var valid = true;
 
-    $(".submit").click(function() {
-        return false;
-    })
+    if(((userDetails['firstname']).trim() === "") || ((userDetails['lastname']).trim() === "") || ((userDetails['email']).trim() === "") || ((userDetails['phoneNumber']).trim() === "") || ((userDetails['dateOfBirth']).trim() === "") || ((userDetails['address']).trim() === "")) {
+        valid = false;
+    } else if ((userDetails['interestedCountry']) === "null" || (userDetails['interestedInCoaching']) === "null") {
+        valid = false;
+    } else {
+        valid = true;
+    }
 
-});
+    return valid;
+}
+
+
+function disableBtnNext1() {
+    $('#btn-next-1').prop('disabled', true);
+    $('#btn-next-1').addClass('cursor-notallowed');
+}
