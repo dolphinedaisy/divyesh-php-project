@@ -123,6 +123,9 @@ function validateForm1() {
     } else if(!isEmailValid((userDetails['email']).trim())) {
         console.log('invalid email');
         valid = false;
+    } else if(!isPhoneNumberValid((userDetails['phoneNumber']).trim()) || !isPhoneNumberValid((userDetails['alternativePhone']).trim())) {
+        console.log('invalid phone');
+        valid = false;
     } else if ((userDetails['interestedCountry']) === "null" || (userDetails['interestedInCoaching']) === "null") {
         console.log('something is null');
         valid = false;
@@ -140,7 +143,11 @@ function disableBtnNext1() {
 }
 
 function isEmailValid(email) {
-    var userinput = email;
-    var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i
-    return pattern.test(userinput);
+    var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+    return pattern.test(email);
+}
+
+function isPhoneNumberValid(phone) {
+    var pattern = /^[789]\d{9}$/;
+    return pattern.test(phone);
 }
