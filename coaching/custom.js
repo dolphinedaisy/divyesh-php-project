@@ -118,8 +118,13 @@ function validateForm1() {
     var valid = true;
 
     if(((userDetails['firstname']).trim() === "") || ((userDetails['lastname']).trim() === "") || ((userDetails['email']).trim() === "") || ((userDetails['phoneNumber']).trim() === "") || ((userDetails['dateOfBirth']).trim() === "") || ((userDetails['address']).trim() === "")) {
+        console.log('something is empty');
+        valid = false;
+    } else if(!isEmailValid((userDetails['email']).trim())) {
+        console.log('invalid email');
         valid = false;
     } else if ((userDetails['interestedCountry']) === "null" || (userDetails['interestedInCoaching']) === "null") {
+        console.log('something is null');
         valid = false;
     } else {
         valid = true;
@@ -132,4 +137,10 @@ function validateForm1() {
 function disableBtnNext1() {
     $('#btn-next-1').prop('disabled', true);
     $('#btn-next-1').addClass('cursor-notallowed');
+}
+
+function isEmailValid(email) {
+    var userinput = email;
+    var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i
+    return pattern.test(userinput);
 }
