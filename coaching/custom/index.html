@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ... -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <script type="text/javascript" src="custom.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<script>
+  		$( function() {
+    			$( "#datepicker" ).datepicker();
+  		} );
+  	</script>
+</head>
+
+	<title>
+		Coaching Inquiry
+	</title>
+</head>
+<body>
+		
+		<div class="container">
+			<div class="row justify-content-md-center">
+			<div class="col col-lg-6">
+			<ul id="progressbar">
+			  <li class="active" id="account"><strong>Personal Info</strong></li>
+			  <li id="personal"><strong>Education Details</strong></li>
+			</ul>
+			<fieldset>
+				<form>
+			 		<div class="form-group">
+					    <label for="exampleFormControlInput1" class="firstname">First Name</label>
+					    <input type="text" class="form-control" id="firstname" placeholder="Firstname" required="required">
+					</div>
+					<div class="form-group">
+					    <label for="exampleFormControlInput1">Last Name</label>
+					    <input type="text" class="form-control" id="lastname" placeholder="Lastname" required="required">
+					</div>
+					<div class="form-group">
+					    <label for="exampleFormControlInput1">Email address</label>
+					    <input type="email" class="form-control" id="Email" placeholder="name@example.com" required="required">
+					</div>
+					<div class="form-group">
+					    <label for="exampleFormControlInput1">Phone Number</label>
+					    <input type="Number" class="form-control" id="Number" placeholder="Phone Number" required="required">
+					</div>
+					<div class="form-group">
+					    <label for="exampleFormControlInput1">Alternative Number</label>
+					    <input type="Number" class="form-control" id="Number" placeholder="Alternative Number" required="required">
+					</div>
+
+					<div class="form-group">
+					    <label for="exampleFormControlInput1">Date of birth </label>
+					    <input type="text" class="form-control" id="datepicker">
+					</div>
+					<div class="form-group">
+					    <label for="exampleFormControlInput1">Address</label>
+					    <input type="text" class="form-control" id="address" placeholder="Address" required="required">
+					</div>
+
+		  			<div class="form-group">
+		 				<label class="control-label" for="Gender">Gender</label>
+	  					<label class="radio-inline" for="Gender-0">
+	      					<input type="radio" name="Gender" id="Gender-0" value="1" checked="checked">
+	     			 			Male
+	   				 	</label> 
+	    					<label class="radio-inline" for="Gender-1">
+	      					<input type="radio" name="Gender" id="Gender-1" value="2">
+	      					Female
+	    					</label> 
+						<label class="radio-inline" for="Gender-2">
+	      					<input type="radio" name="Gender" id="Gender-2" value="3">
+	     				 	Other
+						</label>
+		 			</div>
+					<div class="form-group">
+					    <label for="exampleFormControlInput1">Passport Number</label>
+					    		<input type="text" class="form-control" id="Number" placeholder="Passport Number" required="required"> 
+					</div>
+					<div class="form-group">
+	  					<label class="radio-inline" for="Issued-0">
+	      					<input type="radio" name="issued" id="Gender-0" value="issued" checked="checked">
+	     			 		Issued
+	   				 	</label> 
+	    					<label class="radio-inline" for="Not Issued-1">
+	      					<input type="radio" name="issued" id="Not Issued" value="not_issued">
+	      					Not issued
+	    					</label>
+		 			</div>
+
+		    			<div class="form-group">
+	 				 	<label class="control-label" for="radios">Marital Status:</label>
+	    						<label class="radio-inline" for="radios-0">
+	      					<input type="radio" name="radios" id="radios-0" value="1">
+	     				Married
+	    					</label> 
+	    					<label class="radio-inline" for="radios-1">
+	      					<input type="radio" name="radios" id="radios-1" value="2" checked="checked">
+	      					Unmarried
+	    					</label>
+		  			</div>
+		  			
+		  			<div class="form-group">
+		  				<label class="control-label" for="Interested Country">Interested Country</label>
+		  				<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+						    <option selected>Choose...</option>
+						    <option value="canada">Canada</option>
+						    <option value="new_zeland">New Zeland</option>
+						    <option value="united_kingdom">UK</option>
+						    <option value="usa">USA</option>
+		  				</select>  
+		       		</div>
+
+		       		<div class="form-group">
+		  				<label class="control-label" for="Interested Country">Coaching Interested</label>
+		  				<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+						    <option selected>Choose...</option>
+						    <option value="foundation">foundation</option>
+						    <option value="ielts">IELTS</option>
+						    <option value="pte">PTE</option>
+						    <option value="toffel">Toffel</option>
+		  				</select>  
+		       		</div>
+  						<div style="float:right;">
+    							<input class="btn btn-success next action-button" type="button" name="Submit" value="Next">
+		  					<input class="btn btn-danger" type="button" name="Submit" value="Clear">
+ 						</div>
+					</div>
+
+				</form>
+			</fieldset>
+			<fieldset>
+				<div class="row justify-content-md-center">
+					<div class="col col-lg-10">
+					<label class="cstm-label">Class X - S.S.C</label>
+					<div class="row justify-content-md-center">
+						<div class="col">
+							<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="passingyear inner-cstm-label">Passing Year</label>
+						    		<input type="text" class="form-control" id="PassingYear" placeholder="Passing Year" required="required">
+							</div>
+						</div>
+					    <div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Percentage inner-cstm-label">Percentage</label>
+						    		<input type="number" class="form-control" id="Percentage" placeholder="Percentage" required="required">
+							</div>
+					    </div>
+					    <div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="maths_mark inner-cstm-label">Maths Marks</label>
+						    		<input type="number" class="form-control" id="MathsMarks" placeholder="Maths Mark" required="required">
+							</div>
+					    </div>
+					    <div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="english_mark inner-cstm-label">English Marks</label>
+						    		<input type="text" class="form-control" id="english marks" placeholder="English Marks" required="required">
+							</div>
+					    </div>
+					</div>
+					<label class="cstm-label">Class XII - H.S.C</label>
+					<div class="row justify-content-md-center">
+						<div class="col">
+							<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="passingyear inner-cstm-label">Passing Year</label>
+						    		<input type="text" class="form-control" placeholder="Passing Year" required="required">
+							</div>
+						</div>
+					    <div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Percentage inner-cstm-label">Percentage</label>
+						    		<input type="number" class="form-control" id="Percentage" placeholder="Percentage" required="required">
+							</div>
+					    </div>
+					    <div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="maths_bio inner-cstm-label">Maths/Bio</label>
+						    		<input type="number" class="form-control" id="mathsbio" placeholder="Maths Mark" required="required">
+							</div>
+					    </div>
+					    <div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="english_mark inner-cstm-label">English Marks</label>
+						    		<input type="text" class="form-control" id="english_mark" placeholder="English Marks" required="required">
+							</div>
+						</div>
+						<div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Stream inner-cstm-label inner-cstm-label">Stream</label>
+						    		<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+							    		<option selected>Choose...</option>
+							    		<option value="commerce">Commerce</option>
+							    		<option value="science">Science</option>
+							    		<option value="arts">Arts</option>
+							 		</select>   
+							</div>
+						</div>
+						<div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Specialization inner-cstm-label">Specialization</label>
+						    		<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+							    			<option selected>Choose...</option>
+							    			<option value="others">Others</option>
+			  						</select>  
+							</div>
+						</div>
+					</div>
+					<label class="cstm-label">Diploma</label>
+					<div class="row justify-content-md-center">
+						<div class="col">
+							<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="passingyear inner-cstm-label">Passing Year</label>
+						    		<input type="text" class="form-control" placeholder="Passing Year" required="required">
+							</div>
+						</div>
+					    <div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Percentage inner-cstm-label">Percentage</label>
+						    		<input type="number" class="form-control" id="Percentage" placeholder="Percentage" required="required">
+							</div>
+					    </div>
+					    <div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Backlogs inner-cstm-label">Backlogs</label>
+						    		<input type="number" class="form-control" id="Backlogs" placeholder="Backlogs" required="required">
+							</div>
+					    </div>
+						<div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Diploma_type inner-cstm-label">Diploma Type</label>
+						    		<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+							    		<option selected>Choose...</option>
+							    		<option value="architectural_assistantship">Architectural Assistantship</option>
+							    		<option value="automobile_engineering">Automobile Engineering</option>
+							    		<option value="chemical_engineering">Chemical Engineering</option>
+							    		<option value="civil_engineering">Civil Engineering</option>
+							    		<option value="computer_engineering">Computer Engineering</option>
+							    		<option value="computer_Science_and_engineering">Computer Science and Engineering</option>
+							    		<option value="electrical_engineering">Electrical Engineering</option>
+							    		<option value="electronics_and_communication_engineering">Electronics and Communication Engineering</option>
+							 		</select>   
+							</div>
+						</div>
+					</div>
+					<label class="cstm-label">Bachelor Degree</label>
+					<div class="row justify-content-md-center">
+					    	<div class="col">
+							<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="passingyear">Passing Year</label>
+						    		<input type="text" class="form-control" placeholder="Passing Year" required="required">
+							</div>
+							</div>
+					    <div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Percentage inner-cstm-label">Percentage</label>
+						    		<input type="number" class="form-control" id="Percentage" placeholder="Percentage" required="required">
+							</div>
+					    </div>
+					    <div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Backlogs inner-cstm-label">Backlogs</label>
+						    		<input type="number" class="form-control" id="Backlogs" placeholder="Backlogs" required="required">
+							</div>
+					    </div>
+						<div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Bechelors_type inner-cstm-label">Bechelors Type</label>
+						    		<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+							    		<option selected>Choose...</option>
+							    		<option value="architectural_assistantship">Architectural Assistantship</option>
+							    		<option value="automobile_engineering">Automobile Engineering</option>
+							    		<option value="chemical_engineering">Chemical Engineering</option>
+							    		<option value="civil_engineering">Civil Engineering</option>
+							    		<option value="computer_engineering">Computer Engineering</option>
+							    		<option value="computer_Science_and_engineering">Computer Science and Engineering</option>
+							    		<option value="electrical_engineering">Electrical Engineering</option>
+							    		<option value="electronics_and_communication_engineering">Electronics and Communication Engineering</option>
+							 		</select>   
+							</div>
+						</div>
+					</div>
+					<label class="cstm-label">Post Graduation / Master Degree</label>
+					<div class="row justify-content-md-center">
+					    	<div class="col">
+							<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="passingyear inner-cstm-label">Passing Year</label>
+						    		<input type="text" class="form-control" placeholder="Passing Year" required="required">
+							</div>
+							</div>
+					    <div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Percentage inner-cstm-label">Percentage</label>
+						    		<input type="number" class="form-control" id="Percentage" placeholder="Percentage" required="required">
+							</div>
+					    </div>
+					    <div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Backlogs inner-cstm-label">Backlogs</label>
+						    		<input type="number" class="form-control" id="Backlogs" placeholder="Backlogs" required="required">
+							</div>
+					    </div>
+						<div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Mater_type inner-cstm-label">Master Type</label>
+						    		<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+							    		<option selected>Choose...</option>
+							    		<option value="architectural_assistantship">Architectural Assistantship</option>
+							    		<option value="automobile_engineering">Automobile Engineering</option>
+							    		<option value="chemical_engineering">Chemical Engineering</option>
+							    		<option value="civil_engineering">Civil Engineering</option>
+							    		<option value="computer_engineering">Computer Engineering</option>
+							    		<option value="computer_Science_and_engineering">Computer Science and Engineering</option>
+							    		<option value="electrical_engineering">Electrical Engineering</option>
+							    		<option value="electronics_and_communication_engineering">Electronics and Communication Engineering</option>
+							 		</select>   
+							</div>
+						</div>
+					</div>
+
+					<div class="row justify-content-md-center">
+						<div class="col">
+					    	<div class="form-group">
+					    	<label for="exampleFormControlInput1" class="Job_profile cstm-label inner-cstm-label">Experience</label>
+						    		<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+							    		<option selected>Choose...</option>
+							    		<option value="0">0</option>
+							    		<option value="1">1</option>
+							    		<option value="2">2</option>
+							    		<option value="3">3</option>
+							    		<option value="4">4</option>
+							    		<option value="5">5</option>
+							    		<option value="more_than_5">More than 5</option>
+							 		</select>   
+							</div>
+						</div>
+					 	<div class="col">
+					    	<div class="form-group">
+						    		<label for="exampleFormControlInput1" class="Job_profile cstm-label inner-cstm-label">Job Profile</label>
+						    		<input type="text" class="form-control" id="Jobprofile" placeholder="Job profile" required="required">
+							</div>
+					    </div>
+					</div>
+		  				<input class="btn btn-success previous action-button-previous" type="previous" name="previous" value="previous">
+				</div>
+				</div>
+			</fieldset>
+			</div>
+			</div>
+		</div>
+		</body>
+		
+</html>
