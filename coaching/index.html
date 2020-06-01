@@ -9,16 +9,16 @@
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script>
+    <script>
         $( function() {
-                $( "#datepicker" ).datepicker();
+            $( "#datepicker" ).datepicker();
         } );
     </script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
 
 </head>
 <body>
-    <!-- MultiStep Form -->
+<!-- MultiStep Form -->
 <div class="container-fluid" id="grad1">
     <div class="row justify-content-center mt-0">
         <div class="col-10 text-leftside p-0 mt-3 mb-2">
@@ -35,316 +35,315 @@
                                 <li id="confirm"><strong>Successfull</strong></li>
                             </ul> <!-- fieldsets -->
                             <fieldset>
-                                            <div class="form-group">
-                        <label class="cstm-label" for="exampleFormControlInput1" class="firstname">First Name</label>
-                        <input type="text" class="form-control" id="firstname" placeholder="Firstname" required="required">
-                    </div>
-                    <div class="form-group">
-                        <label class="cstm-label" for="exampleFormControlInput1">Last Name</label>
-                        <input type="text" class="form-control" id="lastname" placeholder="Lastname" required="required">
-                    </div>
-                    <div class="form-group">
-                        <label class="cstm-label" for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="Email" placeholder="name@example.com" required="required">
-                    </div>
-                    <div class="form-group">
-                        <label class="cstm-label" for="exampleFormControlInput1">Phone Number</label>
-                        <input type="Number" class="form-control" id="Number" placeholder="Phone Number" required="required">
-                    </div>
-                    <div class="form-group">
-                        <label class="cstm-label" for="exampleFormControlInput1">Alternative Number</label>
-                        <input type="Number" class="form-control" id="Number" placeholder="Alternative Number" required="required">
-                    </div>
-
-                    <div class="form-group">
-                        <label class="cstm-label" for="exampleFormControlInput1">Date of birth </label>
-                        <input type="text" class="form-control" id="datepicker" placeholder="Date of birth">
-                    </div>
-                    <div class="form-group">
-                        <label class="cstm-label" for="exampleFormControlInput1">Address</label>
-                        <input type="text" class="form-control" id="address" placeholder="Address" required="required">
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label cstm-label for="Gender">Gender</label>
-                        <label class="radio-inline" for="Gender-0">
-                            <input type="radio" name="Gender" id="Gender-0" value="1" checked="checked">
-                                Male
-                        </label> 
-                            <label class="radio-inline" for="Gender-1">
-                            <input type="radio" name="Gender" id="Gender-1" value="2">
-                            Female
-                            </label> 
-                        <label class="radio-inline" for="Gender-2">
-                            <input type="radio" name="Gender" id="Gender-2" value="3">
-                            Other
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label class="cstm-label" for="exampleFormControlInput1">Passport Number</label>
-                                <input type="text" class="form-control" id="Number" placeholder="Passport Number" required="required"> 
-                    </div>
-                    <div class="form-group">
-                        <label class="radio-inline" for="Issued-0">
-                            <input type="radio" name="issued" id="Gender-0" value="issued" checked="checked">
-                            Issued
-                        </label> 
-                            <label class="radio-inline" for="Not Issued-1">
-                            <input type="radio" name="issued" id="Not Issued" value="not_issued">
-                            Not issued
-                            </label>
-                    </div>
-
-                        <div class="form-group">
-                        <label class="control-label cstm-label" for="radios">Marital Status:</label>
-                            <label class="radio-inline" for="radios-0">
-                            <input type="radio" name="radios" id="radios-0" value="1">
-                            Married
-                            </label> 
-                            <label class="radio-inline" for="radios-1">
-                            <input type="radio" name="radios" id="radios-1" value="2" checked="checked">
-                             Unmarried
-                            </label>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="control-label cstm-label" for="Interested Country">Interested Country</label>
-                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                            <option selected>Choose...</option>
-                            <option value="canada">Canada</option>
-                            <option value="new_zeland">New Zeland</option>
-                            <option value="united_kingdom">UK</option>
-                            <option value="usa">USA</option>
-                        </select>  
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label cstm-label" for="Interested Country">Coaching Interested</label>
-                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                            <option selected>Choose...</option>
-                            <option value="foundation">Foundation</option>
-                            <option value="ielts">IELTS</option>
-                            
-                            <option value="pte">PTE</option>
-                            <option value="toffel">Toffel</option>
-                        </select>  
-                    </div>
-                    <input type="button" name="next" class="next action-button" value="Save & Next"/>
+                                <div class="form-group">
+                                    <label class="cstm-label" for="firstname" class="firstname">First Name</label>
+                                    <input type="text" class="form-control" id="firstname" placeholder="Firstname" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label class="cstm-label" for="lastname">Last Name</label>
+                                    <input type="text" class="form-control" id="lastname" placeholder="Lastname" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label class="cstm-label" for="email">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label class="cstm-label" for="phoneNumber">Phone Number</label>
+                                    <input type="Number" class="form-control" id="phoneNumber" placeholder="Phone Number" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label class="cstm-label" for="alternativePhone">Alternative Number</label>
+                                    <input type="Number" class="form-control" id="alternativePhone" placeholder="Alternative Number" required="required">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="cstm-label" for="dateOfBirth">Date of birth </label>
+                                    <input type="text" class="form-control" id="dateOfBirth" placeholder="Date of birth">
+                                </div>
+                                <div class="form-group">
+                                    <label class="cstm-label" for="address">Address</label>
+                                    <input type="text" class="form-control" id="address" placeholder="Address" required="required">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="control-label cstm-label">Gender</label>
+                                    <label class="radio-inline" for="gender-1">
+                                        <input type="radio" name="Gender" id="gender-1" value="1" checked="checked">
+                                        Male
+                                    </label>
+                                    <label class="radio-inline" for="gender-2">
+                                        <input type="radio" name="Gender" id="gender-2" value="2">
+                                        Female
+                                    </label>
+                                    <label class="radio-inline" for="gender-3">
+                                        <input type="radio" name="Gender" id="gender-3" value="3">
+                                        Other
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="cstm-label" for="passportNumber">Passport Number</label>
+                                    <input type="text" class="form-control" id="passportNumber" placeholder="Passport Number" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <label class="radio-inline" for="issued-1">
+                                        <input type="radio" name="issued" id="issued-1" value="1" checked="checked">
+                                        Issued
+                                    </label>
+                                    <label class="radio-inline" for="issued-0">
+                                        <input type="radio" name="issued" id="issued-0" value="0">
+                                        Not issued
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="control-label cstm-label">Marital Status:</label>
+                                    <label class="radio-inline" for="married-1">
+                                        <input type="radio" name="radios" id="married-1" value="1">
+                                        Married
+                                    </label>
+                                    <label class="radio-inline" for="married-0">
+                                        <input type="radio" name="radios" id="married-0" value="0" checked="checked">
+                                        Unmarried
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="control-label cstm-label" for="interestedCountry">Interested Country</label>
+                                    <select class="custom-select my-1 mr-sm-2" id="interestedCountry">
+                                        <option selected>Choose...</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="new_zeland">New Zeland</option>
+                                        <option value="united_kingdom">UK</option>
+                                        <option value="usa">USA</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="control-label cstm-label" for="interestedInCoaching">Coaching Interested</label>
+                                    <select class="custom-select my-1 mr-sm-2" id="interestedInCoaching">
+                                        <option selected>Choose...</option>
+                                        <option value="foundation">Foundation</option>
+                                        <option value="ielts">IELTS</option>
+                                        <option value="pte">PTE</option>
+                                        <option value="toffel">Toffel</option>
+                                    </select>
+                                </div>
+                                <input type="button" name="next" class="next action-button" value="Save & Next"/>
                             </fieldset>
                             <fieldset>
                                 <div class="row justify-content-md-center">
-                    <div class="col col-lg-10">
-                    <label class="cstm-label">Class X - S.S.C</label>
-                    <div class="row justify-content-md-center">
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="passingyear inner-cstm-label">Passing Year</label>
-                                    <input type="text" class="form-control" id="PassingYear" placeholder="Passing Year" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Percentage inner-cstm-label">Percentage</label>
-                                    <input type="number" class="form-control" id="Percentage" placeholder="Percentage" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="maths_mark inner-cstm-label">Maths Marks</label>
-                                    <input type="number" class="form-control" id="MathsMarks" placeholder="Maths Mark" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="english_mark inner-cstm-label">English Marks</label>
-                                    <input type="text" class="form-control" id="english marks" placeholder="English Marks" required="required">
-                            </div>
-                        </div>
-                    </div>
-                    <label class="cstm-label">Class XII - H.S.C</label>
-                    <div class="row justify-content-md-center">
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="passingyear inner-cstm-label">Passing Year</label>
-                                    <input type="text" class="form-control" placeholder="Passing Year" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Percentage inner-cstm-label">Percentage</label>
-                                    <input type="number" class="form-control" id="Percentage" placeholder="Percentage" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="maths_bio inner-cstm-label">Maths/Bio</label>
-                                    <input type="number" class="form-control" id="mathsbio" placeholder="Maths Mark" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="english_mark inner-cstm-label">English Marks</label>
-                                    <input type="text" class="form-control" id="english_mark" placeholder="English Marks" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Stream inner-cstm-label inner-cstm-label">Stream</label>
-                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                                        <option selected>Choose...</option>
-                                        <option value="commerce">Commerce</option>
-                                        <option value="science">Science</option>
-                                        <option value="arts">Arts</option>
-                                    </select>   
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Specialization inner-cstm-label">Specialization</label>
-                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                                            <option selected>Choose...</option>
-                                            <option value="others">Others</option>
-                                    </select>  
-                            </div>
-                        </div>
-                    </div>
-                    <label class="cstm-label">Diploma</label>
-                    <div class="row justify-content-md-center">
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="passingyear inner-cstm-label">Passing Year</label>
-                                    <input type="text" class="form-control" placeholder="Passing Year" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Percentage inner-cstm-label">Percentage</label>
-                                    <input type="number" class="form-control" id="Percentage" placeholder="Percentage" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Backlogs inner-cstm-label">Backlogs</label>
-                                    <input type="number" class="form-control" id="Backlogs" placeholder="Backlogs" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Diploma_type inner-cstm-label">Diploma Type</label>
-                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                                        <option selected>Choose...</option>
-                                        <option value="architectural_assistantship">Architectural Assistantship</option>
-                                        <option value="automobile_engineering">Automobile Engineering</option>
-                                        <option value="chemical_engineering">Chemical Engineering</option>
-                                        <option value="civil_engineering">Civil Engineering</option>
-                                        <option value="computer_engineering">Computer Engineering</option>
-                                        <option value="computer_Science_and_engineering">Computer Science and Engineering</option>
-                                        <option value="electrical_engineering">Electrical Engineering</option>
-                                        <option value="electronics_and_communication_engineering">Electronics and Communication Engineering</option>
-                                    </select>   
-                            </div>
-                        </div>
-                    </div>
-                    <label class="cstm-label">Bachelor Degree</label>
-                    <div class="row justify-content-md-center">
-                            <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="passingyear">Passing Year</label>
-                                    <input type="text" class="form-control" placeholder="Passing Year" required="required">
-                            </div>
-                            </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Percentage inner-cstm-label">Percentage</label>
-                                    <input type="number" class="form-control" id="Percentage" placeholder="Percentage" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Backlogs inner-cstm-label">Backlogs</label>
-                                    <input type="number" class="form-control" id="Backlogs" placeholder="Backlogs" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Bechelors_type inner-cstm-label">Bechelors Type</label>
-                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                                        <option selected>Choose...</option>
-                                        <option value="architectural_assistantship">Architectural Assistantship</option>
-                                        <option value="automobile_engineering">Automobile Engineering</option>
-                                        <option value="chemical_engineering">Chemical Engineering</option>
-                                        <option value="civil_engineering">Civil Engineering</option>
-                                        <option value="computer_engineering">Computer Engineering</option>
-                                        <option value="computer_Science_and_engineering">Computer Science and Engineering</option>
-                                        <option value="electrical_engineering">Electrical Engineering</option>
-                                        <option value="electronics_and_communication_engineering">Electronics and Communication Engineering</option>
-                                    </select>   
-                            </div>
-                        </div>
-                    </div>
-                    <label class="cstm-label">Post Graduation / Master Degree</label>
-                    <div class="row justify-content-md-center">
-                            <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="passingyear inner-cstm-label">Passing Year</label>
-                                    <input type="text" class="form-control" placeholder="Passing Year" required="required">
-                            </div>
-                            </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Percentage inner-cstm-label">Percentage</label>
-                                    <input type="number" class="form-control" id="Percentage" placeholder="Percentage" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Backlogs inner-cstm-label">Backlogs</label>
-                                    <input type="number" class="form-control" id="Backlogs" placeholder="Backlogs" required="required">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Mater_type inner-cstm-label">Master Type</label>
-                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                                        <option selected>Choose...</option>
-                                        <option value="architectural_assistantship">Architectural Assistantship</option>
-                                        <option value="automobile_engineering">Automobile Engineering</option>
-                                        <option value="chemical_engineering">Chemical Engineering</option>
-                                        <option value="civil_engineering">Civil Engineering</option>
-                                        <option value="computer_engineering">Computer Engineering</option>
-                                        <option value="computer_Science_and_engineering">Computer Science and Engineering</option>
-                                        <option value="electrical_engineering">Electrical Engineering</option>
-                                        <option value="electronics_and_communication_engineering">Electronics and Communication Engineering</option>
-                                    </select>   
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row justify-content-md-center">
-                        <div class="col">
-                            <div class="form-group">
-                            <label for="exampleFormControlInput1" class="Job_profile cstm-label inner-cstm-label">Experience</label>
-                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                                        <option selected>Choose...</option>
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="more_than_5">More than 5</option>
-                                    </select>   
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                    <label for="exampleFormControlInput1" class="Job_profile cstm-label inner-cstm-label">Job Profile</label>
-                                    <input type="text" class="form-control" id="Jobprofile" placeholder="Job profile" required="required">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>  <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="next" class="next action-button" value="Next Step" />
+                                    <div class="col col-lg-10">
+                                        <label class="cstm-label">Class X - S.S.C</label>
+                                        <div class="row justify-content-md-center">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="passingYear-10" class="passingyear inner-cstm-label">Passing Year</label>
+                                                    <input type="text" class="form-control" id="passingYear-10" placeholder="Passing Year" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="percentage-10" class="Percentage inner-cstm-label">Percentage</label>
+                                                    <input type="number" class="form-control" id="percentage-10" placeholder="Percentage" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="mathsMarks-10" class="maths_mark inner-cstm-label">Maths Marks</label>
+                                                    <input type="number" class="form-control" id="mathsMarks-10" placeholder="Maths Mark" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="englishMarks-10" class="english_mark inner-cstm-label">English Marks</label>
+                                                    <input type="text" class="form-control" id="englishMarks-10" placeholder="English Marks" required="required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label class="cstm-label">Class XII - H.S.C</label>
+                                        <div class="row justify-content-md-center">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="passingYear-12" class="passingyear inner-cstm-label">Passing Year</label>
+                                                    <input type="text" class="form-control" id="passingYear-12" placeholder="Passing Year" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="percentage-12" class="Percentage inner-cstm-label">Percentage</label>
+                                                    <input type="number" class="form-control" id="percentage-12" placeholder="Percentage" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="maths_bio inner-cstm-label">Maths/Bio</label>
+                                                    <input type="number" class="form-control" id="mathsbio" placeholder="Maths Mark" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="english_mark inner-cstm-label">English Marks</label>
+                                                    <input type="text" class="form-control" id="englishMarks-12" placeholder="English Marks" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="stream" class="Stream inner-cstm-label inner-cstm-label">Stream</label>
+                                                    <select class="custom-select my-1 mr-sm-2" id="stream">
+                                                        <option value="null" selected>Choose...</option>
+                                                        <option value="commerce">Commerce</option>
+                                                        <option value="science">Science</option>
+                                                        <option value="arts">Arts</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="specialization" class="Specialization inner-cstm-label">Specialization</label>
+                                                    <select class="custom-select my-1 mr-sm-2" id="specialization">
+                                                        <option selected>Choose...</option>
+                                                        <option value="others">Others</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label class="cstm-label">Diploma</label>
+                                        <div class="row justify-content-md-center">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="diploma-passing-year" class="passingyear inner-cstm-label">Passing Year</label>
+                                                    <input type="text" class="form-control" id="diploma-passing-year" placeholder="Passing Year" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="percentage-diploma" class="Percentage inner-cstm-label">Percentage</label>
+                                                    <input type="number" class="form-control" id="percentage-diploma" placeholder="Percentage" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="backlogsDiploma" class="Backlogs inner-cstm-label">Backlogs</label>
+                                                    <input type="number" class="form-control" id="backlogsDiploma" placeholder="Backlogs" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="diplomaType" class="Diploma_type inner-cstm-label">Diploma Type</label>
+                                                    <select class="custom-select my-1 mr-sm-2" id="diplomaType">
+                                                        <option selected>Choose...</option>
+                                                        <option value="architectural_assistantship">Architectural Assistantship</option>
+                                                        <option value="automobile_engineering">Automobile Engineering</option>
+                                                        <option value="chemical_engineering">Chemical Engineering</option>
+                                                        <option value="civil_engineering">Civil Engineering</option>
+                                                        <option value="computer_engineering">Computer Engineering</option>
+                                                        <option value="computer_Science_and_engineering">Computer Science and Engineering</option>
+                                                        <option value="electrical_engineering">Electrical Engineering</option>
+                                                        <option value="electronics_and_communication_engineering">Electronics and Communication Engineering</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label class="cstm-label">Bachelor Degree</label>
+                                        <div class="row justify-content-md-center">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="passingYearBachelor" class="passingyear">Passing Year</label>
+                                                    <input type="text" class="form-control" id="passingYearBachelor" placeholder="Passing Year" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="percentageBachelor" class="Percentage inner-cstm-label">Percentage</label>
+                                                    <input type="number" class="form-control" id="percentageBachelor" placeholder="Percentage" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="backlogsBachelor" class="Backlogs inner-cstm-label">Backlogs</label>
+                                                    <input type="number" class="form-control" id="backlogsBachelor" placeholder="Backlogs" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="bachelorDegreeIn" class="Bechelors_type inner-cstm-label">Bechelors Type</label>
+                                                    <select class="custom-select my-1 mr-sm-2" id="bachelorDegreeIn">
+                                                        <option selected>Choose...</option>
+                                                        <option value="architectural_assistantship">Architectural Assistantship</option>
+                                                        <option value="automobile_engineering">Automobile Engineering</option>
+                                                        <option value="chemical_engineering">Chemical Engineering</option>
+                                                        <option value="civil_engineering">Civil Engineering</option>
+                                                        <option value="computer_engineering">Computer Engineering</option>
+                                                        <option value="computer_Science_and_engineering">Computer Science and Engineering</option>
+                                                        <option value="electrical_engineering">Electrical Engineering</option>
+                                                        <option value="electronics_and_communication_engineering">Electronics and Communication Engineering</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label class="cstm-label">Post Graduation / Master Degree</label>
+                                        <div class="row justify-content-md-center">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="passingYearPG" class="passingyear inner-cstm-label">Passing Year</label>
+                                                    <input type="text" class="form-control" id="passingYearPG" placeholder="Passing Year" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="percentagePG" class="Percentage inner-cstm-label">Percentage</label>
+                                                    <input type="number" class="form-control" id="percentagePG" placeholder="Percentage" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="backlogsPG" class="Backlogs inner-cstm-label">Backlogs</label>
+                                                    <input type="number" class="form-control" id="backlogsPG" placeholder="Backlogs" required="required">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="pgDegreeIn" class="Mater_type inner-cstm-label">Master Type</label>
+                                                    <select class="custom-select my-1 mr-sm-2" id="pgDegreeIn">
+                                                        <option selected>Choose...</option>
+                                                        <option value="architectural_assistantship">Architectural Assistantship</option>
+                                                        <option value="automobile_engineering">Automobile Engineering</option>
+                                                        <option value="chemical_engineering">Chemical Engineering</option>
+                                                        <option value="civil_engineering">Civil Engineering</option>
+                                                        <option value="computer_engineering">Computer Engineering</option>
+                                                        <option value="computer_Science_and_engineering">Computer Science and Engineering</option>
+                                                        <option value="electrical_engineering">Electrical Engineering</option>
+                                                        <option value="electronics_and_communication_engineering">Electronics and Communication Engineering</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row justify-content-md-center">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="experience" class="Job_profile cstm-label inner-cstm-label">Experience</label>
+                                                    <select class="custom-select my-1 mr-sm-2" id="experience">
+                                                        <option selected>Choose...</option>
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="more_than_5">More than 5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label for="jobProfile" class="Job_profile cstm-label inner-cstm-label">Job Profile</label>
+                                                    <input type="text" class="form-control" id="jobProfile" placeholder="Job profile" required="required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="next" class="next action-button" value="Next Step" />
                             </fieldset>
                             
                             <fieldset>
