@@ -220,3 +220,14 @@ ul.submenu li{}
 .cursor-notallowed {
     cursor: not-allowed !important;
 }
+
+.text-error {
+    color: red;
+}
+
+.display-none {
+    display: none;
+}
+.display-block {
+    display: block;
+}

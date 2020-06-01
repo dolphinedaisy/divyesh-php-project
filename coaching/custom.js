@@ -8,6 +8,14 @@ jQuery(document).ready(function() {
     onPrevious();
     onFirstFormNext();
 
+    onBlurFirstName();
+    onBlurLastName();
+    onBlurEmail();
+    onBlurPhoneNumber();
+    onBlurAlternative();
+    onBlurAddress();
+    onBlurCountry();
+    onBlurInterest();
 
     $('.radio-group .radio').click(function() {
         $(this).parent().find('.radio').removeClass('selected');
@@ -117,8 +125,10 @@ function onPrevious() {
 function validateForm1() {
     var valid = true;
 
-    if(((userDetails['firstname']).trim() === "") || ((userDetails['lastname']).trim() === "") || ((userDetails['email']).trim() === "") || ((userDetails['phoneNumber']).trim() === "") || ((userDetails['dateOfBirth']).trim() === "") || ((userDetails['address']).trim() === "")) {
+    if(((userDetails['firstname']).trim() === "") || ((userDetails['email']).trim() === "") || ((userDetails['phoneNumber']).trim() === "") || ((userDetails['dateOfBirth']).trim() === "") || ((userDetails['address']).trim() === "")) {
         console.log('something is empty');
+        $('#err-general-bottom').html('Fields are empty.');
+        $('#err-general-bottom').addClass('display-block');
         valid = false;
     } else if(!isEmailValid((userDetails['email']).trim())) {
         console.log('invalid email');
@@ -136,6 +146,103 @@ function validateForm1() {
     return valid;
 }
 
+function onBlurFirstName() {
+    $('#firstname').blur(function () {
+        if(this.value.trim() === "") {
+            $('#err-firstname').html('First name is required');
+            $('#err-firstname').addClass('display-block');
+        } else {
+            $('#err-firstname').removeClass('display-block');
+        }
+    });
+}
+
+function onBlurEmail() {
+    $('#email').blur(function () {
+        if(this.value.trim() === "") {
+            $('#err-email').html('Email is required');
+            $('#err-email').addClass('display-block');
+        } else if(!isEmailValid(this.value.trim())) {
+            $('#err-email').html('Invalid email');
+            $('#err-email').addClass('display-block');
+        } else {
+            $('#err-email').removeClass('display-block');
+        }
+    });
+}
+
+function onBlurLastName() {
+    $('#lastname').blur(function () {
+        if(this.value.trim() === "") {
+            $('#err-lastname').html('Last name is required');
+            $('#err-lastname').addClass('display-block');
+        } else {
+            $('#err-lastname').removeClass('display-block');
+        }
+    });
+}
+
+function onBlurPhoneNumber() {
+    $('#phoneNumber').blur(function () {
+        if(this.value.trim() === "") {
+            $('#err-phone').html('Phone is required');
+            $('#err-phone').addClass('display-block');
+        } else if(!isPhoneNumberValid(this.value.trim())) {
+            $('#err-phone').html('Invalid Phone');
+            $('#err-phone').addClass('display-block');
+        } else {
+            $('#err-phone').removeClass('display-block');
+        }
+    });
+}
+
+function onBlurAlternative() {
+    $('#alternativePhone').blur(function () {
+        if(this.value.trim() === "") {
+            $('#err-alternative').html('Phone is required');
+            $('#err-alternative').addClass('display-block');
+        } else if(!isPhoneNumberValid(this.value.trim())) {
+            $('#err-alternative').html('Invalid Phone');
+            $('#err-alternative').addClass('display-block');
+        } else {
+            $('#err-alternative').removeClass('display-block');
+        }
+    });
+}
+
+function onBlurAddress() {
+    $('#address').blur(function () {
+        if(this.value.trim() === "") {
+            $('#err-address').html('Address is required');
+            $('#err-address').addClass('display-block');
+        } else {
+            $('#err-address').removeClass('display-block');
+        }
+    });
+}
+
+
+function onBlurCountry() {
+    $('#interestedCountry').blur(function () {
+        if(this.value === "null") {
+            $('#err-country').html('Select country');
+            $('#err-country').addClass('display-block');
+        } else {
+            $('#err-country').removeClass('display-block');
+        }
+    });
+}
+
+function onBlurInterest() {
+    $('#interestedInCoaching').blur(function () {
+        if(this.value === "null") {
+            $('#err-interest').html('Select interest');
+            $('#err-interest').addClass('display-block');
+        } else {
+            $('#err-interest').removeClass('display-block');
+        }
+    });
+}
 
 function disableBtnNext1() {
     $('#btn-next-1').prop('disabled', true);
