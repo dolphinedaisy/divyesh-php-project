@@ -5,8 +5,11 @@ jQuery(document).ready(function() {
 
     window.isForm1Valid = false;
     window.userDetails = {};
+    window.userEduDetails = {};
+
     onPrevious();
     onFirstFormNext();
+    onSecondFormNext();
 
     onBlurFirstName();
     onBlurLastName();
@@ -27,6 +30,47 @@ jQuery(document).ready(function() {
     })
 
 });
+
+function onSecondFormNext() {
+    $('#btn-next-2').click(function () {
+
+        userEduDetails['passingYear-10'] = $('#passingYear-10').val();
+        userEduDetails['percentage-10'] = $('#percentage-10').val();
+        userEduDetails['mathsMarks-10'] = $('#mathsMarks-10').val();
+        userEduDetails['englishMarks-10'] = $('#englishMarks-10').val();
+
+        userEduDetails['passingYear-12'] = $('#passingYear-12').val();
+        userEduDetails['percentage-12'] = $('#percentage-12').val();
+        userEduDetails['mathsbio'] = $('#mathsbio').val();
+        userEduDetails['englishMarks-12'] = $('#englishMarks-12').val();
+        userEduDetails['stream'] = $('#stream').val();
+        userEduDetails['specialization'] = $('#specialization').val();
+
+        userEduDetails['diploma-passing-year'] = $('#diploma-passing-year').val();
+        userEduDetails['percentage-diploma'] = $('#percentage-diploma').val();
+        userEduDetails['backlogs-diploma'] = $('#backlogs-diploma').val();
+        userEduDetails['diploma-type'] = $('#diploma-type').val();
+
+        userEduDetails['passing-year-bachelor'] = $('#passing-year-bachelor').val();
+        userEduDetails['passing-year-bachelor'] = $('#passing-year-bachelor').val();
+        userEduDetails['percentage-bachelor'] = $('#percentage-bachelor').val();
+        userEduDetails['backlogs-bachelor'] = $('#backlogs-bachelor').val();
+        userEduDetails['bachelor-degree-in'] = $('#bachelor-degree-in').val();
+
+
+        userEduDetails['passing-year-pG'] = $('#passing-year-pG').val();
+        userEduDetails['percentage-pG'] = $('#percentage-pG').val();
+        userEduDetails['backlogs-pG'] = $('#backlogs-pG').val();
+        userEduDetails['pg-degree-in'] = $('#pg-degree-in').val();
+
+        userEduDetails['experience'] = $('#experience').val();
+        userEduDetails['job-profile'] = $('#job-profile').val();
+
+        save();
+
+
+    });
+}
 
 function onFirstFormNext() {
 
@@ -70,22 +114,23 @@ function onNext() {
         next_fs.show();
         //hide the current fieldset with style
         current_fs.animate({
-            opacity: 0
-        }, {
-            step: function(now) {
-                // for making fielset appear animation
-                opacity = 1 - now;
-
-                current_fs.css({
-                    'display': 'none',
-                    'position': 'relative'
-                });
-                next_fs.css({
-                    'opacity': opacity
-                });
+                opacity: 0
             },
-            duration: 600
-        });
+            {
+                step: function(now) {
+                    // for making fielset appear animation
+                    opacity = 1 - now;
+
+                    current_fs.css({
+                        'display': 'none',
+                        'position': 'relative'
+                    });
+                    next_fs.css({
+                        'opacity': opacity
+                    });
+                },
+                duration: 600
+            });
     });
 }
 
@@ -257,4 +302,21 @@ function isEmailValid(email) {
 function isPhoneNumberValid(phone) {
     var pattern = /^[789]\d{9}$/;
     return pattern.test(phone);
+}
+
+function save() {
+
+    $.ajax({
+        url:"CRUD.php", //the page containing php script
+        type: "post", //request type,
+        dataType: 'json',
+        data: {
+            userDetails,
+            userEduDetails
+        },
+        success:function(result) {
+            console.log(result.abc);
+        }
+    });
+
 }
