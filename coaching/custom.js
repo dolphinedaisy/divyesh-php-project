@@ -52,7 +52,6 @@ function onSecondFormNext() {
         userEduDetails['diploma-type'] = $('#diploma-type').val();
 
         userEduDetails['passing-year-bachelor'] = $('#passing-year-bachelor').val();
-        userEduDetails['passing-year-bachelor'] = $('#passing-year-bachelor').val();
         userEduDetails['percentage-bachelor'] = $('#percentage-bachelor').val();
         userEduDetails['backlogs-bachelor'] = $('#backlogs-bachelor').val();
         userEduDetails['bachelor-degree-in'] = $('#bachelor-degree-in').val();
@@ -315,7 +314,12 @@ function save() {
             userEduDetails
         },
         success:function(result) {
-            console.log(result.abc);
+            console.log(result);
+            onNext();
+        },
+        error: function (error) {
+            console.error(error);
+            return false;
         }
     });
 
