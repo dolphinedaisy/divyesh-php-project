@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    getAllEntries();
+    // getAllEntries();
 });
 
 function getAllEntries() {
