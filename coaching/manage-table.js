@@ -76,12 +76,15 @@ function initTable() {
                 clickToSelect: false,
             },
             {
-                field: 'isEnrolled',
+                field: 'is-enrolled',
                 title: 'Enroll',
                 align: 'center',
                 clickToSelect: false,
                 formatter : function(value, row, index) {
-                    return '<button class="btn btn-primary btn-enroll" data-custom-row-id="'+ row['user-id'] +'">Enroll</button> ';
+                    if(row['is-enrolled'] === '1')
+                        return '<button class="btn btn-primary btn-enroll" data-custom-row-id="'+ row['user-id'] +'" disabled>Already Enrolled</button> ';
+                    else
+                        return '<button class="btn btn-primary btn-enroll" data-custom-row-id="'+ row['user-id'] +'">Enroll</button> ';
                 }
             }
         ]
