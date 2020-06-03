@@ -82,11 +82,22 @@ function initTable() {
                 clickToSelect: false,
                 formatter : function(value, row, index) {
                     if(row['is-enrolled'] === '1')
-                        return '<button class="btn btn-primary btn-enroll" data-custom-row-id="'+ row['user-id'] +'" disabled>Already Enrolled</button> ';
+                        return '<button class="btn btn-primary btn-enroll" data-custom-row-id="'+ row['user-id'] +'" disabled>Enroll</button> ';
                     else
                         return '<button class="btn btn-primary btn-enroll" data-custom-row-id="'+ row['user-id'] +'">Enroll</button> ';
                 }
-            }
+            },
+            {
+                field: 'reminder',
+                title: 'Reminder',
+                align: 'center',
+                clickToSelect: false,
+                formatter : function(value, row, index) {
+                    return '<button type="button" class="btn btn-primary" data-custom-row-id="'+ row['user-id'] +'" data-toggle="modal"' +
+                        ' data-target="#exampleModal">Reminder</button>';
+                }
+            },
+
         ]
     })
     $table.on('check.bs.table uncheck.bs.table ' +
@@ -111,6 +122,8 @@ function initTable() {
 
 $(function() {
     initTable();
+    onShowModal();
+    onBtnSaveModal();
     setTimeout(function () {
         onEnrollBtnClick();
     }, 3000);
@@ -141,5 +154,35 @@ function onEnrollBtnClick() {
     $('.btn-enroll').click(function () {
         var id = $(this).attr('data-custom-row-id');
         enrollSelected([id]);
+    });
+}
+
+function onBtnSaveModal() {
+    $('#btn-save-modal').click(function () {
+        const reminderForId = localStorage.getItem('reminderForId');
+        $.ajax({
+            url:"add-reminder.php", //the page containing php script
+            type: "post", //request type,
+            dataType: 'json',
+            data: {
+                reminderForId: reminderForId,
+                reminderText: $('#txt-area-reminder').val().trim()
+            },
+            success:function(result) {
+                console.log(result);
+                $('#exampleModal').modal('hide');
+                showSuccessToast();
+            },
+            error: function (error) {
+                console.error(error);
+                return false;
+            }
+        });
+    });
+}
+
+function onShowModal() {
+    $('#exampleModal').on('show.bs.modal', function (event) {
+        localStorage.setItem('reminderForId', JSON.stringify($(event.relatedTarget).data('custom-row-id')));
     });
 }
