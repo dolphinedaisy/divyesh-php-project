@@ -9,9 +9,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 <div class="container">
+    
+    <div id="success-toast" class="toast alert custom-alert-success-toast" role="alert" aria-live="assertive"
+         aria-atomic="true"
+         data-delay="2000"
+          style="position: absolute; top: 1rem; right: 1rem;">
+        <div class="toast-header custom-alert-success-toast">
+            <strong class="mr-auto">Success</strong>
+            <small></small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            Updated successfully !
+        </div>
+    </div>
+    
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4 my-3">
@@ -21,9 +40,9 @@
     </div>
     <div class="row">
         <div id="toolbar">
-            <!--<button id="remove" class="btn btn-danger" disabled>
-                <i class="glyphicon glyphicon-remove"></i> Delete
-            </button>-->
+            <button id="enroll" class="btn btn-primary" disabled>
+                <i class="glyphicon glyphicon-remove"></i> Enroll Selected
+            </button>
         </div>
         <div class="col-md-12">
             <table id="table"
@@ -59,8 +78,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
 <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
-<!--<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/boobootstrap-table.min.jststrap-table-locale-all.min.js"></script>
-<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table-locale-all.min.js"></script>-->
 <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/extensions/export/bootstrap-table-export.min.js"></script>
 <script type="text/javascript" src="list.js"></script>
 <script type="text/javascript" src="manage-table.js"></script>
