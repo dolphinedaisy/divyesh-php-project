@@ -92,7 +92,7 @@ function onFirstFormNext() {
         isForm1Valid = validateForm1();
 
         if(isForm1Valid) {
-            onNext();
+            onNext($('#btn-next-1'));
         } else {
             return false;
         }
@@ -100,11 +100,11 @@ function onFirstFormNext() {
     });
 }
 
-function onNext() {
-    $(".next").click(function() {
+function onNext(_this) {
+    // $(".next").click(function() {
 
-        current_fs = $(this).parent();
-        next_fs = $(this).parent().next();
+        current_fs = $(_this).parent();
+        next_fs = $(_this).parent().next();
 
         //Add Class Active
         $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
@@ -130,7 +130,7 @@ function onNext() {
                 },
                 duration: 600
             });
-    });
+    // });
 }
 
 function onPrevious() {
@@ -305,7 +305,11 @@ function isPhoneNumberValid(phone) {
 
 function save() {
 
-    $.ajax({
+    setTimeout(function () {
+        window.location.replace('http://localhost/divyesh-project/coaching/list.html');
+    }, 2000);
+
+    /*$.ajax({
         url:"CRUD.php", //the page containing php script
         type: "post", //request type,
         dataType: 'json',
@@ -315,12 +319,13 @@ function save() {
         },
         success:function(result) {
             console.log(result);
-            onNext();
+            onNext($('#btn-next-2'));
+            window.location.replace('http://localhost/divyesh-project/coaching/list.html');
         },
         error: function (error) {
             console.error(error);
             return false;
         }
-    });
+    });*/
 
 }
