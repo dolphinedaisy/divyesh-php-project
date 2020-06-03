@@ -1,6 +1,6 @@
-var $table = $('#table')
-var $enroll = $('#enroll')
-var selections = []
+var $table = $('#table');
+var $enroll = $('#enroll');
+var selections = [];
 
 function getIdSelections() {
     return $.map($table.bootstrapTable('getSelections'), function (row) {
@@ -20,7 +20,7 @@ function detailFormatter(index, row) {
     $.each(row, function (key, value) {
         html.push('<p><b>' + key + ':</b> ' + value + '</p>')
     })
-    return html.join('')
+    return html.join('');
 }
 
 window.operateEvents = {
@@ -31,27 +31,9 @@ window.operateEvents = {
         $table.bootstrapTable('remove', {
             field: 'user-id',
             values: [row['user-id']]
-        })
+        });
     }
 }
-
-function totalTextFormatter(data) {
-    return 'Total'
-}
-
-function totalNameFormatter(data) {
-    return data.length
-}
-
-function totalPriceFormatter(data) {
-    var field = this.field
-    return '$' + data.map(function (row) {
-        return +row[field].substring(1)
-    }).reduce(function (sum, i) {
-        return sum + i
-    }, 0)
-}
-
 
 function initTable() {
     $table.bootstrapTable('destroy').bootstrapTable({
@@ -92,6 +74,15 @@ function initTable() {
                 title: 'Alternative Number',
                 align: 'center',
                 clickToSelect: false,
+            },
+            {
+                field: 'isEnrolled',
+                title: 'Enroll',
+                align: 'center',
+                clickToSelect: false,
+                formatter : function(value, row, index) {
+                    return '<button class="btn btn-primary btn-enroll" data-custom-row-id="'+ row['user-id'] +'">Enroll</button> ';
+                }
             }
         ]
     })
@@ -116,8 +107,10 @@ function initTable() {
 }
 
 $(function() {
-    showSuccessToast();
     initTable();
+    setTimeout(function () {
+        onEnrollBtnClick();
+    }, 3000);
 });
 
 function enrollSelected(ids) {
@@ -139,4 +132,11 @@ function enrollSelected(ids) {
 
 function showSuccessToast() {
     $('#success-toast').toast('show');
+}
+
+function onEnrollBtnClick() {
+    $('.btn-enroll').click(function () {
+        var id = $(this).attr('data-custom-row-id');
+        enrollSelected([id]);
+    });
 }
