@@ -305,12 +305,12 @@ function isPhoneNumberValid(phone) {
 
 function save() {
 
-    setTimeout(function () {
+    /*setTimeout(function () {
         window.location.replace('http://localhost/divyesh-project/coaching/list.html');
-    }, 2000);
+    }, 2000);*/
 
-    /*$.ajax({
-        url:"CRUD.php", //the page containing php script
+    $.ajax({
+        url:"apis/save-student-details.php", //the page containing php script
         type: "post", //request type,
         dataType: 'json',
         data: {
@@ -320,12 +320,12 @@ function save() {
         success:function(result) {
             console.log(result);
             onNext($('#btn-next-2'));
-            window.location.replace('http://localhost/divyesh-project/coaching/list.html');
+            window.location.replace('http://localhost/divyesh-project/coaching/student-list.html');
         },
         error: function (error) {
             console.error(error);
             return false;
         }
-    });*/
+    });
 
 }

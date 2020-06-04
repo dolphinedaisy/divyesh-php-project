@@ -131,7 +131,7 @@ $(function() {
 
 function enrollSelected(ids) {
     $.ajax({
-        url:"enroll-user.php", //the page containing php script
+        url:"apis/enroll-student.php", //the page containing php script
         type: "post", //request type,
         dataType: 'json',
         data: { ids: ids },
@@ -161,7 +161,7 @@ function onBtnSaveModal() {
     $('#btn-save-modal').click(function () {
         const reminderForId = localStorage.getItem('reminderForId');
         $.ajax({
-            url:"add-reminder.php", //the page containing php script
+            url:"apis/add-reminder.php", //the page containing php script
             type: "post", //request type,
             dataType: 'json',
             data: {

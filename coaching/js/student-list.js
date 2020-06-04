@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 function getAllEntries() {
     $.ajax({
-        url:"getAllEntries.php", //the page containing php script
+        url:"apis/get-all-students.php", //the page containing php script
         type: "get", //request type,
         dataType: 'json',
         success:function(result) {
