@@ -5,8 +5,10 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="css/index.css" rel="stylesheet" id="index-css">
     
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    
     
 </head>
 <body>
@@ -21,9 +23,11 @@
         
         <!-- Login Form -->
         <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In">
+            <input type="text" id="txt-login" class="fadeIn second" name="login" placeholder="Email">
+            <p class="text-error" id="err-email"></p>
+            <input type="password" id="txt-password" class="fadeIn third" name="login" placeholder="Password">
+            <p class="text-error" id="err-password"></p>
+            <input type="button" class="fadeIn fourth" id="btn-login" value="Log In">
         </form>
         
         <!-- Remind Passowrd -->

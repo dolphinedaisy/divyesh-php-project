@@ -231,9 +231,3 @@ ul.submenu li{}
 .display-block {
     display: block;
 }
-
-.custom-alert-success-toast {
-    color: #155724 !important;
-    background-color: #d4edda !important;
-    border-color: #c3e6cb !important;
-}
